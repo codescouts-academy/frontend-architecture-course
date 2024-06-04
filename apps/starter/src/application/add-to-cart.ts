@@ -14,9 +14,9 @@ export class AddToCartUseCase {
   public execute(user: User, product: Product): void {
     if (user.hasAllergy(product.toppings)) {
       this.notifier.notify(this.warningMessage);
-
       return;
     }
+
     const cart = this.storage.cart;
 
     cart.addProduct(product);
