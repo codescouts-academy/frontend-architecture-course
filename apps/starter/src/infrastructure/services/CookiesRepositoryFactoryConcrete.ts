@@ -6,12 +6,12 @@ import { CookiesRepositoryFactory } from "@/domain/services/CookiesRepositoryFac
 import { CookiesRepositoryForAdmin } from "./CookiesRepositoryForAdmin";
 import { CookiesRepositoryForNormalUser } from "./CookiesRepositoryForNormalUser";
 
-export class CookiesRepositoryFactoryImpl
+export class CookiesRepositoryFactoryConcrete
   extends Factory
   implements CookiesRepositoryFactory
 {
   create(user: User) {
-    if (user?.isAdmin) return this.resolver.resolve(CookiesRepositoryForAdmin);
+    if (user.isAdmin) return this.resolver.resolve(CookiesRepositoryForAdmin);
 
     return this.resolver.resolve(CookiesRepositoryForNormalUser);
   }

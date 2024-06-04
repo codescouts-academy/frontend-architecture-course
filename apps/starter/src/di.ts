@@ -13,7 +13,7 @@ import { usePayment } from "@/infrastructure/services/PaymentService";
 import { useUserStorage } from "@/infrastructure/services/UserStorageService";
 
 import { CookiesLoaderUseCase } from "./application/cookies-loader";
-import { CookiesRepositoryFactoryImpl } from "./infrastructure/services/CookiesRepositoryFactoryImpl";
+import { CookiesRepositoryFactoryConcrete } from "./infrastructure/services/CookiesRepositoryFactoryConcrete";
 import { CookiesRepositoryForAdmin } from "./infrastructure/services/CookiesRepositoryForAdmin";
 import { CookiesRepositoryForNormalUser } from "./infrastructure/services/CookiesRepositoryForNormalUser";
 
@@ -43,10 +43,10 @@ export const buildDependencies = (builder: typeof register) => {
 
     builder(CookiesRepositoryForAdmin).build(),
     builder(CookiesRepositoryForNormalUser).build(),
-    builder(CookiesRepositoryFactoryImpl).build(),
+    builder(CookiesRepositoryFactoryConcrete).build(),
 
     builder(CookiesLoaderUseCase)
-      .withDependencies(CookiesRepositoryFactoryImpl, useUserStorage)
+      .withDependencies(CookiesRepositoryFactoryConcrete, useUserStorage)
       .build(),
   ];
 };
