@@ -1,4 +1,4 @@
-import { mock } from "jest-mock-extended";
+import { mock } from "@codescouts/test/jest";
 
 import { Cart } from "@/domain/model/cart";
 import { Product } from "@/domain/model/product";

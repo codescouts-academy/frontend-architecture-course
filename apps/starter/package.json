@@ -11,15 +11,16 @@
     "test": "jest"
   },
   "dependencies": {
-    "@codescouts/di": "0.0.7",
-    "@codescouts/domain": "*",
-    "@codescouts/events": "*",
-    "@codescouts/store": "*",
-    "@codescouts/ui": "*",
+    "@codescouts/di": "0.0.8",
+    "@codescouts/domain": "^1.0.1",
+    "@codescouts/events": "^1.0.10",
+    "@codescouts/store": "^1.0.4",
+    "@codescouts/ui": "^1.0.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@codescouts/test": "^1.0.8",
     "@types/jest": "^29.5.2",
     "@types/node": "^20.2.5",
     "@types/react": "^18.0.37",
@@ -35,7 +36,6 @@
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "jest": "^29.5.0",
-    "jest-mock-extended": "^3.0.4",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
     "tsconfig": "*",
