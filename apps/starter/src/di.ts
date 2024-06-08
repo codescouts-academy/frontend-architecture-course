@@ -13,12 +13,15 @@ import { usePayment } from "@/infrastructure/services/PaymentService";
 import { useUserStorage } from "@/infrastructure/services/UserStorageService";
 
 import { CookiesLoaderUseCase } from "./application/cookies-loader";
+import { OrderCreatedCorrectlyHandler } from "./infrastructure/events/OrderCreatedCorrectlyHandler";
 import { CookiesRepositoryFactoryConcrete } from "./infrastructure/services/CookiesRepositoryFactoryConcrete";
 import { CookiesRepositoryForAdmin } from "./infrastructure/services/CookiesRepositoryForAdmin";
 import { CookiesRepositoryForNormalUser } from "./infrastructure/services/CookiesRepositoryForNormalUser";
 
 export const buildDependencies = (builder: typeof register) => {
   return [
+    builer(OrderCreatedCorrectlyHandler).build(),
+
     builder(LogoutUseCase)
       .withDependencies(useUserStorage, useCartStorage)
       .build(),

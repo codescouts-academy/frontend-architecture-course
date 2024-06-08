@@ -10,9 +10,7 @@ import { Front } from "@/ui/pages/Front";
 import { User } from "@/ui/pages/User";
 
 export const App = () => {
-  useEvents(() => {
-    new OrderCreatedCorrectlyHandler();
-  });
+  useEvents(OrderCreatedCorrectlyHandler);
 
   return (
     <DependencyInjectionContainer builder={buildDependencies}>

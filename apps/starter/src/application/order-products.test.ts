@@ -1,5 +1,5 @@
 import { IEventDispatcher } from "@codescouts/events";
-import { mock } from "jest-mock-extended";
+import { mock } from "@codescouts/test/jest";
 
 import { OrderCreatedCorrectly } from "@/domain/events/OrderCreatedCorrectly";
 import { Cart } from "@/domain/model/cart";
