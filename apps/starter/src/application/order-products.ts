@@ -22,7 +22,7 @@ export class OrderProductsUserCase {
     const order = new Order(user, cart);
 
     const paid = await order.tryPay(this.payment);
-    if (!paid) return this.notifier.notify("El pago no fué realizado 🤷");
+    if (!paid) return this.notifier.success("El pago no fué realizado 🤷");
 
     this.orderStorage.addOrder(order);
     this.cartStorage.emptyCart();

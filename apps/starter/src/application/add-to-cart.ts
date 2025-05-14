@@ -7,13 +7,13 @@ export class AddToCartUseCase {
   private warningMessage = "¡Esta cookie es peligrosa para su salud! 😱";
 
   constructor(
-    private storage: CartStorageService,
-    private notifier: NotificationService
+    private readonly storage: CartStorageService,
+    private readonly notifier: NotificationService
   ) {}
 
   public execute(user: User, product: Product): void {
     if (user.hasAllergy(product.toppings)) {
-      this.notifier.notify(this.warningMessage);
+      this.notifier.error(this.warningMessage);
       return;
     }
 

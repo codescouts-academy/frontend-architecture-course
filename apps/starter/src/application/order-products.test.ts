@@ -46,7 +46,7 @@ describe("order products", () => {
 
     await orderProducts.execute(user, cart);
 
-    expect(notifier.notify).toHaveBeenCalledWith("El pago no fué realizado 🤷");
+    expect(notifier.success).toHaveBeenCalledWith("El pago no fué realizado 🤷");
   });
 
   test("when the payment is successfully add order correctly", async () => {
@@ -54,7 +54,7 @@ describe("order products", () => {
 
     await orderProducts.execute(user, cart);
 
-    expect(notifier.notify).toBeCalledTimes(0);
+    expect(notifier.success).toBeCalledTimes(0);
     expect(orderStorage.addOrder).toBeCalledTimes(1);
     expect(cartStorage.emptyCart).toBeCalledTimes(1);
   });
@@ -64,7 +64,7 @@ describe("order products", () => {
 
     await orderProducts.execute(user, cart);
 
-    expect(notifier.notify).toBeCalledTimes(0);
+    expect(notifier.success).toBeCalledTimes(0);
     expect(dispatcher.dispatch).toHaveBeenCalledWith(
       new OrderCreatedCorrectly(new Order(user, cart))
     );

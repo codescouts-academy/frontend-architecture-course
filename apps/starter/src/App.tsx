@@ -8,6 +8,7 @@ import { Header } from "@/ui/Header";
 import { Auth } from "@/ui/pages/Auth";
 import { Front } from "@/ui/pages/Front";
 import { User } from "@/ui/pages/User";
+import { Toaster } from "react-hot-toast";
 
 export const App = () => {
   useEvents(OrderCreatedCorrectlyHandler);
@@ -15,6 +16,19 @@ export const App = () => {
   return (
     <DependencyInjectionContainer builder={buildDependencies}>
       <BrowserRouter>
+        <Toaster
+          position="bottom-right"
+          containerStyle={{
+            width: "100%",
+          }}
+          toastOptions={{
+            style: {
+              minWidth: "fit-content",
+              paddingInline: "1rem",
+            },
+          }}
+        />
+
         <div className="app">
           <Header />
           <Routes>

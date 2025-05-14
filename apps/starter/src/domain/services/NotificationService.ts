@@ -1,3 +1,4 @@
 export interface NotificationService {
-  notify(message: string): void;
+  success(message: string): void;
+  error(message: string): void;
 }
