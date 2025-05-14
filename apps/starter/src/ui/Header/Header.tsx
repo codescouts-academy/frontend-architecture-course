@@ -35,9 +35,11 @@ export const Header = () => {
       </Link>
 
       {!isLoggedIn ? (
-        <Link to="/auth">Log in</Link>
+        <Link className={styles.button} to="/auth">
+          Log in
+        </Link>
       ) : (
-        <Link to="/user">
+        <Link className={styles.button} to="/user">
           {userName} ({quantity})
         </Link>
       )}

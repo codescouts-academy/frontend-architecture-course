@@ -10,3 +10,19 @@
 .form button {
   cursor: pointer;
 }
+
+.button {
+  background-color: #f29f58;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #ffc86e;
+  transform: scale(1.05);
+}

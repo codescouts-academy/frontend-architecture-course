@@ -9,6 +9,10 @@ export class AuthenticateUseCase {
   ) {}
 
   public async execute(name: UserName, email: Email): Promise<void> {
+    if (!name || !email) {
+      return
+    }
+
     const user = await this.authenticationService.auth(name, email);
 
     this.userStorageService.updateUser(user);

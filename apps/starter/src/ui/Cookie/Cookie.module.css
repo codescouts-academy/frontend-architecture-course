@@ -3,6 +3,7 @@
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   padding: 10px;
+  user-select: none;
 }
 
 .image {
@@ -24,4 +25,5 @@
 
 .title {
   font-weight: bold;
+  user-select: text;
 }
