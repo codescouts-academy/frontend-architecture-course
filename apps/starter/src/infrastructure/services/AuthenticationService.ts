@@ -10,8 +10,8 @@ export const useAuth = (): AuthenticationService => {
           "sample-user-id",
           name,
           email,
-          ["malvavisco", "cacahuete"],
-          ["cacao", "cereza"],
+          ["marshmallow", "peanut"],
+          ["cocoa", "cherry"],
           name === "admin" ? ["admin"] : ["normal"]
         )
       );

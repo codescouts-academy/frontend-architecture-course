@@ -24,8 +24,8 @@ describe("order products", () => {
     "sample-user-id",
     "fake",
     "fakeEmail",
-    ["malvavisco", "cacahuete"],
-    ["cacao", "cereza"],
+    ["marshmallow", "peanut"],
+    ["cocoa", "cherry"],
     ["admin"]
   );
   const cart = new Cart([

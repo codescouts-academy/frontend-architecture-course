@@ -10,8 +10,8 @@ export class Product {
 
 export const ingredients: Record<Ingredient, string> = {
   chocolate: "Chocolate",
-  cacao: "Cacao Power",
-  cereza: "Cereza",
-  malvavisco: "Malvavisco",
-  cacahuete: "Cachauate",
+  cocoa: "cocoa",
+  cherry: "cherry",
+  marshmallow: "marshmallow",
+  peanut: "peanut",
 };

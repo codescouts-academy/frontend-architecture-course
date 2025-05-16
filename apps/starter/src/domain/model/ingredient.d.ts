@@ -1,1 +1,1 @@
-type Ingredient = "chocolate" | "cacahuete" | "cacao" | "malvavisco" | "cereza";
+type Ingredient = "chocolate" | "peanut" | "cocoa" | "marshmallow" | "cherry";

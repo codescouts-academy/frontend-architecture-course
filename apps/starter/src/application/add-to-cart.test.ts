@@ -16,14 +16,14 @@ describe("AddToCart should", () => {
   const notifier = mock<NotificationService>();
 
   test("show message when user has allergies to any ingredient of a product", () => {
-    const ingredientThatUserHasAllergy = "cacahuete";
+    const ingredientThatUserHasAllergy = "peanut";
 
     const user = new User(
       "FAKE",
       "FAKE",
       "FAKE",
       [],
-      [ingredientThatUserHasAllergy, "cacao"],
+      [ingredientThatUserHasAllergy, "cocoa"],
       []
     );
 
@@ -47,12 +47,12 @@ describe("AddToCart should", () => {
       "FAKE",
       "FAKE",
       [],
-      ["cacahuete", "cacao"],
+      ["peanut", "cocoa"],
       []
     );
 
     const productWithNoAllergies = new Product("FAKE", "FAKE", 0, [
-      "malvavisco",
+      "marshmallow",
     ]);
 
     const addToProduct = new AddToCartUseCase(cartStorage, notifier);
