@@ -20,7 +20,7 @@ import { CookiesRepositoryForNormalUser } from "./infrastructure/services/Cookie
 
 export const buildDependencies = (builder: typeof register) => {
   return [
-    builder(OrderCreatedCorrectlyHandler).build(),
+    builder(OrderCreatedCorrectlyHandler).withDependency(useNotifier).build(),
 
     builder(LogoutUseCase)
       .withDependencies(useUserStorage, useCartStorage)

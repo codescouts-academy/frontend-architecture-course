@@ -22,13 +22,16 @@ export class OrderProductsUserCase {
     const order = new Order(user, cart);
 
     const paid = await order.tryPay(this.payment);
-    if (!paid) return this.notifier.success("El pago no fué realizado 🤷");
+    if (!paid) return this.notifier.error("We have not been able to process your payment 🤷");
 
     this.orderStorage.addOrder(order);
     this.cartStorage.emptyCart();
 
     this.dispatcher.dispatch(new OrderCreatedCorrectly(order));
 
+    // Simulate delivery and completion just for demo purposes
+    // In a real-world scenario, this would be handled by a different service
+    // or a background job
     setTimeout(() => {
       this.deliverOrder(order);
 

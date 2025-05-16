@@ -35,8 +35,8 @@ describe("AddToCart should", () => {
 
     addToProduct.execute(user, productWithAllergies);
 
-    expect(notifier.success).toHaveBeenCalledWith(
-      "¡Esta cookie es peligrosa para su salud! 😱"
+    expect(notifier.error).toHaveBeenCalledWith(
+      "This cookie is dangerous for your health!😱"
     );
     expect(cartMock.addProduct).toBeCalledTimes(0);
   });

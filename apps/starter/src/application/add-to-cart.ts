@@ -4,7 +4,7 @@ import { CartStorageService } from "@/domain/services/CartStorageService";
 import { NotificationService } from "@/domain/services/NotificationService";
 
 export class AddToCartUseCase {
-  private warningMessage = "¡Esta cookie es peligrosa para su salud! 😱";
+  private readonly warningMessage = "This cookie is dangerous for your health!😱";
 
   constructor(
     private readonly storage: CartStorageService,

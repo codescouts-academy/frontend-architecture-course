@@ -46,7 +46,7 @@ describe("order products", () => {
 
     await orderProducts.execute(user, cart);
 
-    expect(notifier.success).toHaveBeenCalledWith("El pago no fué realizado 🤷");
+    expect(notifier.error).toHaveBeenCalledWith("We have not been able to process your payment 🤷");
   });
 
   test("when the payment is successfully add order correctly", async () => {
