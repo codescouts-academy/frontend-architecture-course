@@ -1,5 +1,0 @@
-
-> starter@0.0.0 lint
-> eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0
-
-Warning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .

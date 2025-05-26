@@ -19,6 +19,7 @@ export class OrderProductsUserCase {
   ) {}
 
   public async execute(user: User, cart: Cart) {
+    debugger
     const order = new Order(user, cart);
 
     const paid = await order.tryPay(this.payment);

@@ -1,8 +1,0 @@
-{
-  "name": "domain",
-  "version": "1.0.0",
-  "description": "Our Application Domain",
-  "private": true,
-  "main": "./src/index.ts",
-  "types": "./src/index.ts"
-}

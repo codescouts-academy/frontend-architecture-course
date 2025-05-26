@@ -54,7 +54,7 @@ describe("order products", () => {
 
     await orderProducts.execute(user, cart);
 
-    expect(notifier.success).toBeCalledTimes(0);
+    expect(notifier.error).toBeCalledTimes(0);
     expect(orderStorage.addOrder).toBeCalledTimes(1);
     expect(cartStorage.emptyCart).toBeCalledTimes(1);
   });

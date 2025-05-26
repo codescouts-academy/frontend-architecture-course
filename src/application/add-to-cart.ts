@@ -12,6 +12,7 @@ export class AddToCartUseCase {
   ) {}
 
   public execute(user: User, product: Product): void {
+    debugger
     if (user.hasAllergy(product.toppings)) {
       this.notifier.error(this.warningMessage);
       return;
