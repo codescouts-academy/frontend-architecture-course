@@ -1,23 +1,27 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es6", "dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
+    "target": "ES2015",
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "inlineSources": false,
     "isolatedModules": true,
-    "noEmit": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
     "jsx": "react-jsx",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "rootDir": "src",
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "types": ["@types/jest"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["./src"],
-  "extends": "./tsconfig.paths.json"
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

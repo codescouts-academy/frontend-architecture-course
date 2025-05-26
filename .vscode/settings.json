@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["codescouts", "craco", "firefox"]
+  "cSpell.words": ["codescouts", "craco", "firefox", "injecty"],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
