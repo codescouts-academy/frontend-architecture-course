@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">
-  🏗️ Curso de arquitectura FrontEnd 🏭
+  🏗️ Frontend Architecture Course 🏭
 </h1>
 <p align="center">
   <br />
